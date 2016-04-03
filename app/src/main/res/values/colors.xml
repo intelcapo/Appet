@@ -6,4 +6,6 @@
     <color name="textColorPrimari">#f7f8f9</color>
     <color name="windowBackground">#ffffff</color>
     <color name="navigationbarColor">#000000</color>
+
+    <color name="black_overlay">#66000000</color>
 </resources>
