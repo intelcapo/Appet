@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:id="@+id/layout_login">
+
+    <ImageView
+
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imgInformation"
+        android:src="@drawable/icon_information"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:contentDescription="imgInformation" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgLogo"
+        android:textSize="30dp"
+        android:text="@string/titleAccount"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:contentDescription="imgLogo" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView"
+            android:layout_margin="3dp"
+            android:layout_below="@+id/imgLogo">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:contentDescription="icon_user"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/icon_user"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/imgUser" />
+                <EditText
+                    android:inputType="textPersonName"
+                    android:id="@+id/editUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imgUser"
+                    android:layout_toRightOf="@+id/imgUser"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:hint="@string/name"
+                    android:layout_margin="10dp"/>
+                <ImageView
+                    android:contentDescription="imgPassword"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/imgUser"
+                    android:src="@drawable/icon_mail"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/imgMail" />
+                <EditText
+                    android:id="@+id/editMail"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imgMail"
+                    android:layout_toRightOf="@+id/imgMail"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:hint="@string/mail"
+                    android:layout_margin="10dp"
+                    />
+                <ImageView
+                    android:contentDescription="imgPassword"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/imgMail"
+                    android:src="@drawable/icon_security"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/imgPassword" />
+                <EditText
+                    android:id="@+id/edpassword"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imgPassword"
+                    android:layout_toRightOf="@+id/imgPassword"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:hint="@string/password"
+                    android:layout_margin="10dp"
+                    />
+                <ImageView
+                    android:contentDescription="imgPa"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/imgMail"
+                    android:src="@drawable/icon_security"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/imgPassword" />
+                <EditText
+                    android:id="@+id/edpassword"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imgPassword"
+                    android:layout_toRightOf="@+id/imgPassword"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:hint="@string/password"
+                    android:layout_margin="10dp"
+                    />
+                <CalendarView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgPassword"
+                    android:id="@+id/calendarView" />
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="@string/login"
+                    android:background="@color/button"
+                    android:layout_margin="15dp"
+                    android:elevation="10dp"
+                    android:enabled="false"
+                    android:layout_below="@+id/calendarView"
+                    />
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+
+
+
+</RelativeLayout>
+

@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#E64A19</color>
-    <color name="colorPrimaryDark">#de3b09</color>
+    <color name="colorPrimaryDark">#df1313</color>
     <color name="colorAccent">#4099ff</color>
     <color name="textColorPrimari">#f7f8f9</color>
     <color name="windowBackground">#ffffff</color>
     <color name="navigationbarColor">#000000</color>
-
     <color name="black_overlay">#66000000</color>
+    <color name="button">#795548</color>
+    <color name="textColorSecond">#FFFFFF</color>
+    <color name="textColorSecondHint">#9f9c9c</color>
+    <color name="bright_foreground_material_light">#000000</color>
+    <color name="black">#fefefe</color>
+    <color name="background_material_light">#000000</color>
+    <color name="colorBackground">#ffffff</color>
+    <color name="primary_dark_material_light">#e9e9e9</color>
+    <color name="backgroundContainerButton">#56ffffff</color>
 </resources>
