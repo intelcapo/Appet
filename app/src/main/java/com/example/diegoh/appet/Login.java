@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 /**
@@ -15,6 +16,7 @@ import android.widget.TextView;
  */
 public class Login extends Activity implements View.OnClickListener{
     private TextView textView;
+    private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +27,9 @@ public class Login extends Activity implements View.OnClickListener{
 
         textView=(TextView)findViewById(R.id.textregistreAcount);
         textView.setOnClickListener(this);
+
+        button=(Button)findViewById(R.id.btnLogin);
+        button.setOnClickListener(this);
     }
 
     @Override
@@ -37,11 +42,34 @@ public class Login extends Activity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        startActivity();
-    }
-    public void startActivity(){
+        int iSelectionActivity=0;
+        switch(v.getId())
+        {
 
-        Intent intent=new Intent(this,CreateAccount.class);
+            case R.id.textregistreAcount:
+                iSelectionActivity=0;
+                break;
+            case R.id.btnLogin:
+
+                iSelectionActivity=1;
+                break;
+        }
+        startActivity(iSelectionActivity);
+    }
+    public void startActivity(int sType){
+        Intent intent=null;
+        switch(sType)
+        {
+
+            case 0:
+                intent=new Intent(this,CreateAccount.class);
+                break;
+            case 1:
+
+                intent=new Intent(this,MainActivity.class);
+                break;
+        }
+
         startActivity(intent);
         overridePendingTransition(R.anim.pull_in_left, R.anim.push_out_right);
 

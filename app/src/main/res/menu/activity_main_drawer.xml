@@ -3,21 +3,37 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/Places_DogFriendly"
+            android:icon="@drawable/icon_lugares_dogfriendly"
+            android:title="@string/Places_DogFriendly" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/hikes"
+            android:icon="@drawable/icon_caminatas"
+            android:title="@string/hikes" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/Social_Club"
+            android:icon="@drawable/icon_club_social"
+            android:title="@string/Social_Club" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/Nutrition"
+            android:icon="@drawable/icon_nutricion"
+            android:title="@string/Nutrition"  />
+        <item
+            android:id="@+id/Health"
+            android:icon="@drawable/icon_salud"
+            android:title="@string/Health"  />
+        <item
+            android:id="@+id/Profile"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="@string/Profile"  />
+        <item
+            android:id="@+id/Timeline"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/Timeline"  />
+        <item
+            android:id="@+id/Settings"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/Settings"  />
     </group>
 
     <item android:title="Communicate">
