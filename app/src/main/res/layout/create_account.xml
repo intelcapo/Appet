@@ -15,19 +15,28 @@
         android:layout_alignParentRight="true"
         android:layout_margin="15dp"
         android:contentDescription="imgInformation" />
-
     <TextView
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imgLogo"
-        android:textSize="30dp"
+        android:id="@+id/TextLogo"
+        android:textSize="30sp"
         android:text="@string/titleAccount"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
         android:contentDescription="imgLogo" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgLogo"
+        android:src="@drawable/icon_phone"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/TextLogo"
+        android:contentDescription="imgLogo" />
+
+
 
 
         <ScrollView
@@ -39,7 +48,8 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:id="@+id/container">
 
 
                 <ImageView
@@ -83,6 +93,7 @@
                     android:hint="@string/mail"
                     android:layout_margin="10dp"
                     />
+
                 <ImageView
                     android:contentDescription="imgPassword"
                     android:layout_width="40dp"
@@ -105,49 +116,128 @@
                     android:layout_margin="10dp"
                     />
                 <ImageView
-                    android:contentDescription="imgPa"
+                    android:contentDescription="imgPresent"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:layout_below="@+id/imgMail"
-                    android:src="@drawable/icon_security"
+                    android:layout_below="@+id/imgPassword"
+                    android:src="@drawable/icon_present"
                     android:layout_margin="10dp"
                     android:layout_alignParentLeft="true"
-                    android:id="@+id/imgPassword" />
-                <EditText
-                    android:id="@+id/edpassword"
-                    android:inputType="textPassword"
+                    android:id="@+id/imgPresent" />
+                <TextView
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/imgPassword"
-                    android:layout_toRightOf="@+id/imgPassword"
+                    android:id="@+id/textimgPresent"
+                    android:textSize="18sp"
+                    android:text="@string/birthDate"
+                    android:layout_alignTop="@+id/imgPresent"
+                    android:contentDescription="imgLogo"
+                    android:layout_alignLeft="@+id/edpassword"
+                    android:layout_alignStart="@+id/edpassword"
+                    android:layout_alignBottom="@+id/imgPresent"
+                    android:gravity="fill_vertical"
+                    android:layout_toLeftOf="@+id/imgDate"
+                    android:layout_toStartOf="@+id/imgDate" />
+                <ImageView
+                    android:contentDescription="imgDate"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/icon_date"
+                    android:id="@+id/imgDate"
+                    android:layout_alignTop="@+id/textimgPresent"
+                    android:layout_alignRight="@+id/edpassword"
+                    android:layout_alignEnd="@+id/edpassword" />
+
+
+                <RadioGroup
+                    android:id="@+id/groupSex"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/imgDate"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:hint="@string/password"
+                    android:gravity="center_horizontal"
                     android:layout_margin="10dp"
-                    />
-                <CalendarView
+                    android:layout_alignParentLeft="true">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/female"
+                        android:layout_margin="5dp"
+                        android:id="@+id/radioFemale" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/male"
+                        android:id="@+id/radioMale" />
+                </RadioGroup>
+
+                <ImageView
+                    android:contentDescription="imgCity"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/groupSex"
+                    android:src="@drawable/icon_city"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/imgCity" />
+                <TextView
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/imgPassword"
-                    android:id="@+id/calendarView" />
+                    android:id="@+id/textImgCity"
+                    android:textSize="18sp"
+                    android:text="@string/birthDate"
+                    android:layout_alignTop="@+id/imgPresent"
+                    android:contentDescription="imgLogo"
+                    android:layout_alignLeft="@+id/edpassword"
+                    android:layout_alignStart="@+id/edpassword"
+                    android:layout_alignBottom="@+id/imgPresent"
+                    android:gravity="fill_vertical"
+                    android:layout_toLeftOf="@+id/imgDate"
+                    android:layout_toStartOf="@+id/imgDate" />
+
+                <ListView
+                    android:id="@+id/listCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/btnLogin"
+                    android:layout_toEndOf="@+id/textView4"
+                    android:text="listCity"
+                    android:layout_toRightOf="@+id/textView4"
+                    android:layout_margin="5dp" />
 
                 <Button
                     android:id="@+id/btnLogin"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:text="@string/login"
+                    android:text="@string/titleAccount"
                     android:background="@color/button"
-                    android:layout_margin="15dp"
                     android:elevation="10dp"
-                    android:enabled="false"
-                    android:layout_below="@+id/calendarView"
-                    />
+                    android:enabled="true"
 
+                    android:layout_below="@+id/imgCity"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="15dp" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    android:textSize="18sp"
+                    android:text="@string/city"
+                    android:contentDescription="imgLogo"
+                    android:gravity="fill_vertical"
+                    android:layout_alignTop="@+id/imgCity"
+                    android:layout_toRightOf="@+id/imgCity"
+                    android:layout_toEndOf="@+id/imgCity"
+                    android:layout_alignBottom="@+id/imgCity" />
             </RelativeLayout>
         </ScrollView>
-
-
 
 
 </RelativeLayout>
